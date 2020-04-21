@@ -1,0 +1,968 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZC.Customer.Model</name>
+    </assembly>
+    <members>
+        <member name="T:ZC.Customer.Model.Enums.AccountPeriod">
+            <summary>
+            账期
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.CC">
+            <summary>
+            提款现货
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D30">
+            <summary>
+            30天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D45">
+            <summary>
+            45天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D60">
+            <summary>
+            60天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D90">
+            <summary>
+            90天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D120">
+            <summary>
+            120天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D150">
+            <summary>
+            150天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D180">
+            <summary>
+            180天
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.AccountPeriod.D240">
+            <summary>
+            240天
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Area">
+            <summary>
+            区域
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Area.SH">
+            <summary>
+            苏沪区
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Area.HZ">
+            <summary>
+            华中区
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Area.XNHN">
+            <summary>
+            西南华南区
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Area.North">
+            <summary>
+            北区
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.ColdChain">
+            <summary>
+            冷链记录
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ColdChain.Carry">
+            <summary>
+            随货
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ColdChain.Alone">
+            <summary>
+            单独寄
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ColdChain.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.CustomerLevel">
+            <summary>
+            客户等级
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerLevel.One">
+            <summary>
+            1级
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerLevel.Two">
+            <summary>
+            2级
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerLevel.Three">
+            <summary>
+            3级
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.CustomerType">
+            <summary>
+            客户分类
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerType.Heavy">
+            <summary>
+            大客户
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerType.Light">
+            <summary>
+            小客户
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.CustomerType.Common">
+            <summary>
+            普通客户
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Express">
+            <summary>
+            快递
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Express.SF">
+            <summary>
+            顺丰
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Express.YD">
+            <summary>
+            韵达
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Express.DB">
+            <summary>
+            德邦
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Express.MLW">
+            <summary>
+            美乐维冷链
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.ExtraPacking">
+            <summary>
+            特殊包装
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170">
+            <summary>
+            7170
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170Z">
+            <summary>
+            7170Z
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170S">
+            <summary>
+            7170S
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170X">
+            <summary>
+            7170X
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170XX">
+            <summary>
+            7170XX
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170J">
+            <summary>
+            7170J
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.ExtraPacking.P7170O">
+            <summary>
+            7170O
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Invoice">
+            <summary>
+            发票
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Invoice.Carry">
+            <summary>
+            随货
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Invoice.Alone">
+            <summary>
+            单独寄
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.LinkNum">
+            <summary>
+            出库单联数
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.White">
+            <summary>
+            白联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.WhiteDouble">
+            <summary>
+            2张白联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.RedWhite">
+            <summary>
+            红白两联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.Three">
+            <summary>
+            三联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.Four">
+            <summary>
+            四联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.Five">
+            <summary>
+            五联
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.LinkNum.FourYellowBlue">
+            <summary>
+            四联+黄蓝两联
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Post">
+            <summary>
+            岗位
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Post.Director">
+            <summary>
+            总监
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Post.Other">
+            <summary>
+            其他
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Anhui">
+            <summary>
+            安徽
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Beijing">
+            <summary>
+            北京
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Fujian">
+            <summary>
+            福建
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Gansu">
+            <summary>
+            甘肃
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Guangdong">
+            <summary>
+            广东
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Guangxi">
+            <summary>
+            广西
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Guizhou">
+            <summary>
+            贵州
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Hainan">
+            <summary>
+            海南
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Hebei">
+            <summary>
+            河北
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Henan">
+            <summary>
+            河南
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.HeiLongjiang">
+            <summary>
+            黑龙江
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Hubei">
+            <summary>
+            湖北
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Hunan">
+            <summary>
+            湖南
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Jilin">
+            <summary>
+            吉林
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Jiangsu">
+            <summary>
+            江苏
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Jiangxi">
+            <summary>
+            江西
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Liaoning">
+            <summary>
+            辽宁
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.NeiMenggu">
+            <summary>
+            内蒙古
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Ningxia">
+            <summary>
+            宁夏
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Qinghai">
+            <summary>
+            青海
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Shandong">
+            <summary>
+            山东
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Shanxi">
+            <summary>
+            山西
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Shaanxi">
+            <summary>
+            陕西
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Shanghai">
+            <summary>
+            上海
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Sichuan">
+            <summary>
+            四川
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Tianjin">
+            <summary>
+            天津
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Xinjiang">
+            <summary>
+            新疆
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Yunnan">
+            <summary>
+            云南
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Zhejiang">
+            <summary>
+            浙江
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Province.Chongqing">
+            <summary>
+            重庆
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.QT">
+            <summary>
+            质检报告
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.QT.CarrySeal">
+            <summary>
+            随货盖章
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.QT.CarryNoSeal">
+            <summary>
+            随货不盖章
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.QT.Alone">
+            <summary>
+            单独寄
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.QT.None">
+            <summary>
+            无
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.SpecialProduct">
+            <summary>
+            特殊产品名称
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.AST">
+            <summary>
+            AST
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.ALT">
+            <summary>
+            ALT
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.DB">
+            <summary>
+            DB
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.TB">
+            <summary>
+            TB
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.CRP">
+            <summary>
+            CRP
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.CYSC">
+            <summary>
+            CYSC
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.HCY">
+            <summary>
+            HCY
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.MA">
+            <summary>
+            MA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.PA">
+            <summary>
+            PA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.CK">
+            <summary>
+            CK
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.CKMB">
+            <summary>
+            CKMB
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.ADA">
+            <summary>
+            ADA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.APOE">
+            <summary>
+            APOE
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.TBA">
+            <summary>
+            TBA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.RBP">
+            <summary>
+            RBP
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.HSCRP">
+            <summary>
+            HS-CRP
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.C3">
+            <summary>
+            C3
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.C4">
+            <summary>
+            C4
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.C02">
+            <summary>
+            C02
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.IGG">
+            <summary>
+            IGG
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.GLU">
+            <summary>
+            GLU(单)
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.ASO">
+            <summary>
+            ASO
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.MB">
+            <summary>
+            MB
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.LPA">
+            <summary>
+            LPA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.LDL">
+            <summary>
+            LDL
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.HDL">
+            <summary>
+            HDL
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.HA">
+            <summary>
+            HA
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.SpecialProduct.UA">
+            <summary>
+            UA
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.StaffPost">
+            <summary>
+            员工岗位
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.StaffPost.Director">
+            <summary>
+            总监
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.StaffPost.Salesman">
+            <summary>
+            业务员
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Enums.Template">
+            <summary>
+            模板
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.A4">
+            <summary>
+            标准A4
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.Price">
+            <summary>
+            价格模板
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.ProductA4">
+            <summary>
+            产注价A4
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.ProductA4NoPrice">
+            <summary>
+            产注价A4+无价格
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.Product">
+            <summary>
+            产注价模板
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.ProductDate">
+            <summary>
+            产注价模板+生产日期
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.ProductPermit">
+            <summary>
+            产注价模板+生产许可
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.ProductSCQY">
+            <summary>
+            产注价A4+SCQY
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.Valence">
+            <summary>
+            价生模板
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.A4NoPrice">
+            <summary>
+            标准A4无价格
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.Model.Enums.Template.A4Date">
+            <summary>
+            标准A4+生产日期
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Models.CompanyInfo">
+            <summary>
+            公司信息表
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.CompanyName">
+            <summary>
+            公司名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.ContractAddress">
+            <summary>
+            公司地址
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.ContractName">
+            <summary>
+            联系人
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.ContractNum">
+            <summary>
+            联系电话
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.CustomerType">
+            <summary>
+            客户分类
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.CustomerLevel">
+            <summary>
+            客户等级
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Area">
+            <summary>
+            区域
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Province">
+            <summary>
+            省份
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.DirectorId">
+            <summary>
+            总监id
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.DirectorName">
+            <summary>
+            总监姓名
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.SalesmanId">
+            <summary>
+            业务员id
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.SalesmanName">
+            <summary>
+            业务员姓名
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Express">
+            <summary>
+            快递
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Invoice">
+            <summary>
+            发票
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Template">
+            <summary>
+            出库单模板
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.LinkNum">
+            <summary>
+            出库单联数
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.IsSeal">
+            <summary>
+            出库单是否盖章
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.QT">
+            <summary>
+            质检报告
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.ColdChain">
+            <summary>
+            冷链记录
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.AlterationCompany">
+            <summary>
+            变更公司名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.AffiliatedCompany">
+            <summary>
+            关联公司名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.SpecialProduct">
+            <summary>
+            特殊产品名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.ExtraPacking">
+            <summary>
+            特殊包装
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.AccountPeriod">
+            <summary>
+            账期
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.Remark">
+            <summary>
+            注意事项
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.CompanyInfo.IsDeleted">
+            <summary>
+            是否逻辑删除
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Models.FileUploadsInfo">
+            <summary>
+            文件上传信息表
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.CompanyId">
+            <summary>
+            公司Id
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.FileType">
+            <summary>
+            文件分类
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.FileName">
+            <summary>
+            文件名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.FileForm">
+            <summary>
+            文件格式
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.FilePath">
+            <summary>
+            文件路径
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.CreationTime">
+            <summary>
+            上传时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.FileUploadsInfo.IsDeleted">
+            <summary>
+            是否逻辑删除
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Models.ProductInfo">
+            <summary>
+            产品基础信息表
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Id">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Code">
+            <summary>
+            存货编码
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.ProductName">
+            <summary>
+            产品中文名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Specs">
+            <summary>
+            规格
+            </summary>        
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Model">
+            <summary>
+            型号
+            </summary>        
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Abbreviation">
+            <summary>
+            简称
+            </summary>        
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Pack">
+            <summary>
+            包装
+            </summary>        
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Milliliter">
+            <summary>
+            规格/毫升
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Price">
+            <summary>
+            报价
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.Rise">
+            <summary>
+            规格/升
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.RegisterNo">
+            <summary>
+            注册证号
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.ProductInfo.IsDeleted">
+            <summary>
+            是否删除
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.Model.Models.StaffInfo">
+            <summary>
+            员工信息表
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.StaffInfo.StaffName">
+            <summary>
+            员工姓名
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.StaffInfo.Post">
+            <summary>
+            岗位标识
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.StaffInfo.CreationTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.StaffInfo.LastModificationTime">
+            <summary>
+            最后修改时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Model.Models.StaffInfo.IsDeleted">
+            <summary>
+            是否逻辑删除
+            </summary>
+        </member>
+    </members>
+</doc>

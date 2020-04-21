@@ -1,0 +1,477 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ZC.Customer</name>
+    </assembly>
+    <members>
+        <member name="T:ZC.Customer.AOP.GlobalCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.AOP.GlobalLogAOP">
+            <summary>
+            GlobalLogAOP 继承IInterceptor接口
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.AOP.GlobalLogAOP.#ctor(Microsoft.AspNetCore.SignalR.IHubContext{UMa.Merak.Infrastructure.Hubs.ChatHub},UMa.Merak.Infrastructure.HttpContextUser.IUser)">
+            <summary>
+            
+            </summary>
+            <param name="hubContext"></param>
+            <param name="user"></param>
+        </member>
+        <member name="M:ZC.Customer.AOP.GlobalLogAOP.Intercept(Castle.DynamicProxy.IInvocation)">
+            <summary>
+            实例化IInterceptor唯一方法 
+            </summary>
+            <param name="invocation">包含被拦截方法的信息</param>
+        </member>
+        <member name="T:ZC.Customer.AOP.GlobalRedisCacheAOP">
+            <summary>
+            面向切面的缓存使用
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.OverWrite.JwtHelper.IssueJwt(ZC.Customer.AuthHelper.OverWrite.TokenModelJwt)">
+            <summary>
+            颁发JWT字符串
+            </summary>
+            <param name="tokenModel"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.OverWrite.JwtHelper.SerializeJwt(System.String)">
+            <summary>
+            解析
+            </summary>
+            <param name="jwtStr"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZC.Customer.AuthHelper.OverWrite.TokenModelJwt">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.OverWrite.TokenModelJwt.Uid">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.OverWrite.TokenModelJwt.Name">
+            <summary>
+            用户账号
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.OverWrite.TokenModelJwt.Role">
+            <summary>
+            用户角色
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.AuthHelper.JwtTokenAuth">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.AuthHelper.JwtTokenAuth._next">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.JwtTokenAuth.#ctor(Microsoft.AspNetCore.Http.RequestDelegate)">
+            <summary>
+            
+            </summary>
+            <param name="next"></param>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.JwtTokenAuth.Invoke(Microsoft.AspNetCore.Http.HttpContext)">
+            <summary>
+            
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZC.Customer.AuthHelper.PermissionHandler">
+            <summary>
+            权限授权处理器
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionHandler.Schemes">
+            <summary>
+            验证方案提供对象
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.PermissionHandler.#ctor(Microsoft.AspNetCore.Authentication.IAuthenticationSchemeProvider)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="schemes"></param>
+        </member>
+        <member name="T:ZC.Customer.AuthHelper.PermissionItem">
+            <summary>
+            用户或角色或其他凭据实体,就像是订单详情一样
+            之前的名字是 Permission
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionItem.Role">
+            <summary>
+            用户或角色或其他凭据名称
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionItem.Url">
+            <summary>
+            请求Url
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.AuthHelper.PermissionRequirement">
+            <summary>
+            必要参数类，类似一个订单信息
+            继承 IAuthorizationRequirement，用于设计自定义权限处理器PermissionHandler
+            因为AuthorizationHandler 中的泛型参数 TRequirement 必须继承 IAuthorizationRequirement
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.Permissions">
+            <summary>
+            用户权限集合，一个订单包含了很多详情，
+            同理，一个网站的认证发行中，也有很多权限详情(这里是Role和URL的关系)
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.DeniedAction">
+            <summary>
+            无权限action
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.ClaimType">
+            <summary>
+            认证授权类型
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.LoginPath">
+            <summary>
+            请求路径
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.Issuer">
+            <summary>
+            发行人
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.Audience">
+            <summary>
+            订阅人
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.Expiration">
+            <summary>
+            过期时间
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.AuthHelper.PermissionRequirement.SigningCredentials">
+            <summary>
+            签名验证
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.AuthHelper.PermissionRequirement.#ctor(System.String,System.Collections.Generic.List{ZC.Customer.AuthHelper.PermissionItem},System.String,System.String,System.String,Microsoft.IdentityModel.Tokens.SigningCredentials,System.TimeSpan)">
+            <summary>
+            构造
+            </summary>
+            <param name="deniedAction">拒约请求的url</param>
+            <param name="permissions">权限集合</param>
+            <param name="claimType">声明类型</param>
+            <param name="issuer">发行人</param>
+            <param name="audience">订阅人</param>
+            <param name="signingCredentials">签名验证实体</param>
+            <param name="expiration">过期时间</param>
+        </member>
+        <!-- 对于成员“T:ZC.Customer.Controllers.CompanyInfoController”忽略有格式错误的 XML 注释 -->
+        <member name="F:ZC.Customer.Controllers.CompanyInfoController.companyInfoServices">
+            <summary>
+            公司信息业务逻辑接口
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.#ctor(ZC.Customer.IServices.ICompanyInfoServices)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="companyInfoServices"></param>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetCompanyInfoPageResult(ZC.Customer.Dto.Company.CompanyInfoSearchDto)">
+            <summary>
+            获取公司分页列表信息
+            </summary>
+            <param name="dto">查询dto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.AddOrUpdateCompanyInfo(ZC.Customer.Dto.JsonDto)">
+            <summary>
+            新增或者修改公司信息
+            </summary>
+            <param name="jsonStr">Json格式公司信息str</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetCompanyInfoById(System.String)">
+            <summary>
+            根据Id获取公司基本信息
+            </summary>
+            <param name="id">公司Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetFileInfoDataById(System.String)">
+            <summary>
+            根据Id获取公司附件信息
+            </summary>
+            <param name="id">公司Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.DeleteCompanyInfoById(System.String)">
+            <summary>
+            根据Id删除公司基本信息
+            </summary>
+            <param name="id">公司Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.DeleteUploadFileInfoById(System.String)">
+            <summary>
+            根据Id删除公司附件本信息
+            </summary>
+            <param name="id">附件Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.uploadCompanyInfoFile">
+            <summary>
+            上传公司附件
+            DisableRequestSizeLimit 不限制文件大小
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetCustomerTypeCombobox">
+            <summary>
+            获取客户分类下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetCustomerLevelCombobox">
+            <summary>
+            获取客户等级下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetAreaCombobox">
+            <summary>
+            获取区域下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetProvinceCombobox">
+            <summary>
+            获取省份下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetDirectorCombobox">
+            <summary>
+            获取总监下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetSalesmanCombobox">
+            <summary>
+            获取业务员下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetExpressCombobox">
+            <summary>
+            获取快递下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetInvoiceCombobox">
+            <summary>
+            获取发票下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetTemplateCombobox">
+            <summary>
+            获取出库单模板下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetLinkNumCombobox">
+            <summary>
+            获取出库单联数下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetQTCombobox">
+            <summary>
+            获取质检报告下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetColdChainCombobox">
+            <summary>
+            获取冷链记录下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetSpecialProductCombobox">
+            <summary>
+            获取特殊产品名称下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetExtraPackingCombobox">
+            <summary>
+            获取特殊包装下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.CompanyInfoController.GetAccountPeriodCombobox">
+            <summary>
+            获取账期下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZC.Customer.Controllers.ProductInfoController">
+            <summary>
+            产品信息
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Controllers.ProductInfoController.#ctor(ZC.Customer.IServices.IProductInfoServices)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Controllers.ProductInfoController.AddOrUpdateProductInfo(ZC.Customer.Dto.JsonDto)">
+            <summary>
+            添加产品
+            api/ProductInfo/AddOrUpdateProductInfo
+            </summary>
+            <param name="jsonStr"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.ProductInfoController.GetProductInfoPageResultAsync(ZC.Customer.Dto.Product.ProductSearchDto)">
+            <summary>
+            获取产品分页列表信息
+            </summary>
+            <param name="dto">查询dto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.ProductInfoController.GetIdWorker(System.Int32)">
+            <summary>
+            获取雪花Id
+            </summary>
+            <param name="count"></param>
+            <returns></returns>
+        </member>
+        <member name="T:ZC.Customer.Controllers.StaffInfoController">
+            <summary>
+            员工信息
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Controllers.StaffInfoController.#ctor(ZC.Customer.IServices.IStaffInfoServices)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Controllers.StaffInfoController.AddOrUpdateStaffInfo(ZC.Customer.Dto.JsonDto)">
+            <summary>
+            添加员工信息
+            api/StaffInfo/AddOrUpdateStaffInfo
+            </summary>
+            <param name="jsonStr"></param>        
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.StaffInfoController.GetStaffInfoPageResult(ZC.Customer.Dto.Staff.StaffInfoSearchDto)">
+            <summary>
+            获取员工分页列表信息
+            </summary>
+            <param name="dto">查询dto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.StaffInfoController.DelStaffInfoById(System.String)">
+            <summary>
+            根据Id删除员工信息
+            </summary>
+            <param name="Id">员工Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ZC.Customer.Controllers.StaffInfoController.GetStaffPostCombobox">
+            <summary>
+            获取员工岗位下拉列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:ZC.Customer.Filter.GlobalExceptionsFilter">
+            <summary>
+            全局异常错误日志
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.Filter.GlobalExceptionsFilter.WriteLog(System.String,System.Exception)">
+            <summary>
+            自定义返回格式
+            </summary>
+            <param name="throwMsg"></param>
+            <param name="ex"></param>
+            <returns></returns>
+        </member>
+        <member name="P:ZC.Customer.Filter.JsonErrorResponse.Message">
+            <summary>
+            生产环境的消息
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Filter.JsonErrorResponse.DevelopmentMessage">
+            <summary>
+            开发环境的消息
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.Startup.repository">
+            <summary>
+            log4net 仓储库
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.SwaggerHelper.CustomApiVersion">
+            <summary>
+            自定义版本
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.SwaggerHelper.CustomApiVersion.ApiVersions">
+            <summary>
+            Api接口版本 自定义
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.SwaggerHelper.CustomApiVersion.ApiVersions.V1">
+            <summary>
+            V1 版本
+            </summary>
+        </member>
+        <member name="F:ZC.Customer.SwaggerHelper.CustomApiVersion.ApiVersions.V2">
+            <summary>
+            V2 版本
+            </summary>
+        </member>
+        <member name="T:ZC.Customer.SwaggerHelper.CustomRouteAttribute">
+            <summary>
+            自定义路由 /api/{version}/[controler]/[action]
+            </summary>
+        </member>
+        <member name="P:ZC.Customer.SwaggerHelper.CustomRouteAttribute.GroupName">
+            <summary>
+            分组名称,是来实现接口 IApiDescriptionGroupNameProvider
+            </summary>
+        </member>
+        <member name="M:ZC.Customer.SwaggerHelper.CustomRouteAttribute.#ctor(System.String)">
+            <summary>
+            自定义路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+        </member>
+        <member name="M:ZC.Customer.SwaggerHelper.CustomRouteAttribute.#ctor(ZC.Customer.SwaggerHelper.CustomApiVersion.ApiVersions,System.String)">
+            <summary>
+            自定义版本+路由构造函数，继承基类路由
+            </summary>
+            <param name="actionName"></param>
+            <param name="version"></param>
+        </member>
+    </members>
+</doc>

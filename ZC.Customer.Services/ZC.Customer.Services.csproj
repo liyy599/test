@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\ZC.Customer\bin\Debug\</OutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="8.1.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="6.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="2.2.0" />
+    <PackageReference Include="UMa.Merak.Infrastructure" Version="1.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ZC.Customer.IRepository\ZC.Customer.IRepository.csproj" />
+    <ProjectReference Include="..\ZC.Customer.IServices\ZC.Customer.IServices.csproj" />
+    <ProjectReference Include="..\ZC.Customer.Model\ZC.Customer.Model.csproj" />
+    <ProjectReference Include="..\ZC.Customer.Repository\ZC.Customer.Repository.csproj" />
+  </ItemGroup>
+
+</Project>
